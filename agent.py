@@ -79,6 +79,15 @@ call apis.phone.search_contacts(relationship="<relationship>", access_token=toke
 matching contact(s) with phone_number, email, and addresses. (show_contact_relationships only lists \
 the available relationship LABELS, not contacts.) NEVER invent contact details or placeholder numbers.
 - Work in small steps; inspect results before acting. Never invent API names/fields.
+- To BUY / order on Amazon there IS a real checkout — never "simulate" it: \
+apis.amazon.add_product_to_cart(product_id=, quantity=, access_token=) for each item, then \
+apis.amazon.place_order(payment_card_id=, address_id=, access_token=). Get payment_card_id from \
+apis.amazon.show_payment_cards() and address_id from apis.amazon.show_addresses() (pick the address \
+the task asks for, e.g. the home address). place_order orders everything currently in the cart. \
+Use a NON-EXPIRED payment card, and make sure each cart quantity does not exceed the product's \
+available inventory (place_order returns a 422 otherwise).
+- Don't assume an API doesn't exist — if unsure, list the app's APIs with \
+apis.api_docs.show_api_descriptions(app_name="<app>") before giving up.
 - Many list APIs are PAGINATED (page_index / page_limit). To count or aggregate ALL items, loop pages \
 (increment page_index from 0) until a page returns empty — never assume one call returns everything. \
 A result of 0/empty usually means you only checked the first page or the wrong field.
