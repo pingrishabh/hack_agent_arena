@@ -1,80 +1,68 @@
-# ://agent_arena
+# ://agent_arena — Team `pingrishabh`
 
-Build an **autonomous AI agent** that completes everyday-app tasks in
-[AppWorld](https://appworld.dev). You are ranked by **Task Goal Completion (TGC)** —
-the percentage of tasks your agent fully completes.
+A general autonomous agent for [AppWorld](https://appworld.dev), submitted for the final
+`agent_arena_eval` set. It reads a supervisor instruction and acts by writing Python that calls the
+apps' APIs.
 
-## What AppWorld is
-A simulated world of **9 apps** (Spotify, Gmail, Venmo, Amazon, Splitwise, Phone,
-File System, Simple Note, + `supervisor`/`api_docs`), **457 APIs**, and ~100
-simulated people. Your agent reads a natural-language instruction from its
-"supervisor" and acts by **writing Python code** that calls the apps' APIs.
+- **Team name:** `pingrishabh`
+- **Model used:** `openrouter/meta-llama/llama-3.3-70b-instruct` (Meta Llama 3.3 70B — the mandated
+  model, served via OpenRouter for throughput; the LLM boundary is litellm so the provider is a
+  one-line config change).
+- **HydraDB:** **yes** — used two ways: (1) the **semantic API-doc retrieval** layer (453 API
+  signatures ingested as `knowledge`, queried with graph context, fused with a local BM25 floor via
+  reciprocal-rank fusion), and (2) **cross-task memory** (episodic task summaries + versioned
+  procedural recipes, consolidated at task end).
+- **Self-reported score:** TGC `20.0` / SGC `20.0` (from `appworld evaluate` on `agent_arena_eval`;
+  2/10 — the challenge set is 3 easy / 3 medium / 4 hard).
+- **Integrity:** general agent — **no `task_id` hardcoding**, no per-task answers.
 
-## 1. Setup (~3 min) — needs Python 3.11
+## Architecture (see [`ARCH.md`](ARCH.md) for the full design)
+
+Per task the orchestrator runs a structured pipeline around a ReAct loop:
+
+```
+retrieve(memory + hybrid API index) → PLAN → ReAct loop[ACT → observe → error-recovery]
+  → SELF-VERIFY (gate before complete_task) → REFLECT/consolidate(memory)
+```
+
+Key components:
+- **LLM boundary** (`agent.py` `call_llm`, litellm) — swappable provider; scored on Llama 3.3 70B.
+- **Hybrid API retrieval** (`apidocs.py`) — local BM25 over the 457 docs (zero-token, always-on
+  floor) fused with HydraDB semantic retrieval; injects only the top-k relevant API signatures so the
+  agent never burns turns on runtime `api_docs` discovery.
+- **HydraDB memory** (`memory.py`) — the brain, behind a thin seam; fully defensive (a memory failure
+  never crashes a run).
+- **Verify-before-complete** (`agent.py`) — `complete_task` is intercepted inside the sandbox so a
+  completion is *captured* and self-verified before it is actually submitted (the model often calls
+  `complete_task` directly; this makes the verify gate unbypassable).
+- **Deterministic API self-correction** — if the model invents a method name, the agent auto-feeds
+  that app's real API names on the next turn.
+- **Token discipline** (`context.py`) — token-budgeted context assembly + observation truncation.
+- **Run harness** (`run.py`) — checkpoint/resume (skip completed tasks).
+
+## How to run
+
 ```bash
-git clone git@github.com:interface4agi/hack_agent_arena.git
-cd hack_agent_arena
-bash setup.sh                 # installs uv+py3.11, appworld + data, creates .env; verifies
+bash setup.sh                 # uv + Python 3.11 + appworld + data
 source .venv/bin/activate
-```
-Then give the agent a model. **For fair scoring, everyone runs the same model:
-Groq's Llama 3.3 70B — free, fast, no billing, no card.**
+# put keys in .env: OPENROUTER_API_KEY=...  HYDRADB_API_KEY=...
 
-1. Get a free key at **[console.groq.com](https://console.groq.com)** → sign in with
-   GitHub/Google → **API Keys → Create**.
-2. Put it in **`.env`**:
-   ```
-   GROQ_API_KEY=...
-   ```
-3. That's it — the agent already defaults to `MODEL=groq/llama-3.3-70b-versatile`.
-   It runs in the cloud, so any laptop works — no GPU needed.
+# install the eval set
+mkdir -p data/datasets && cp eval/agent_arena_eval.txt data/datasets/agent_arena_eval.txt
 
-> The agent runs on [litellm](https://docs.litellm.ai), so `MODEL` is a
-> `provider/model` string. You may use a different backend while **developing**
-> (`gemini/gemini-2.0-flash`, `anthropic/claude-haiku-4-5`, `ollama/llama3.1`, …),
-> but **submitted/scored runs must use `groq/llama-3.3-70b-versatile`** so every
-> team is compared on equal footing. (AppWorld itself needs no key — you can
-> `appworld play` and hand-solve tasks offline.)
-
-## 2. Smoke-test the starter agent (2 tasks)
-```bash
-export APPWORLD_EXPERIMENT=team_<yourname>     # your UNIQUE team id
-export APPWORLD_DATASET=dev MAX_TASKS=2
+export MODEL=openrouter/meta-llama/llama-3.3-70b-instruct
+export APPWORLD_EXPERIMENT=team_pingrishabh
+export APPWORLD_DATASET=agent_arena_eval MAX_TASKS=0
 python agent.py
+
+appworld evaluate team_pingrishabh agent_arena_eval   # prints TGC / SGC
 ```
-`agent.py` is a working ReAct code agent — read it, then make it smarter
-(planning, error recovery, better prompts, retrieval over `apis.api_docs`, …).
 
-Explore a task world by hand: `appworld play`
+Outputs (including each `tasks/<id>/dbs/` and `evaluations/agent_arena_eval.json`) are committed under
+`experiments/outputs/team_pingrishabh/`.
 
-## 3. The rules your agent plays by
-- One Python code block per turn; whatever you `print()` comes back as the next observation.
-- Discover APIs at runtime:
-  `apis.api_docs.show_api_descriptions(app_name='spotify')`, then
-  `apis.api_docs.show_api_doc(app_name='spotify', api_name='login')`.
-- Get credentials: `apis.supervisor.show_account_passwords()`, then log into each app.
-- Finish a task: `apis.supervisor.complete_task(answer=<answer or None>)`.
+## Requirements
 
-## 4. Submit (at each checkpoint)
-1. Run your agent on the **official split** the organizers announce
-   (default `test_normal`, 168 tasks):
-   ```bash
-   export APPWORLD_DATASET=test_normal MAX_TASKS=0
-   python agent.py
-   ```
-2. Self-evaluate:
-   ```bash
-   appworld evaluate $APPWORLD_EXPERIMENT test_normal
-   ```
-3. Zip and submit your whole output folder:
-   `experiments/outputs/$APPWORLD_EXPERIMENT/`
-   It must include `evaluations/test_normal.json` and the `tasks/<id>/dbs/` folders.
-
-## Scoring
-- **TGC** (primary) — % of tasks fully completed. **SGC** (scenario goal completion) breaks ties.
-- 🐉 **Bonus:** teams that integrate **HydraDB** into their agent's architecture
-  earn extra credit (ask organizers for details).
-- Reference baseline on `test_normal`: ReAct + GPT-4o ≈ **48.8 TGC**. Beat it.
-
----
-Built for **://agent_arena** · benchmark: [AppWorld](https://github.com/StonyBrookNLP/appworld) (ACL'24 Best Resource Paper)
+See [`requirements.txt`](requirements.txt). Note `litellm==1.34.42` is pinned: `appworld` hard-pins
+`pydantic<2`, which conflicts with newer litellm; this version coexists with pydantic v1 and supports
+both Groq and OpenRouter.

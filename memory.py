@@ -50,6 +50,13 @@ def _log(msg: str) -> None:
     print(f"  [memory] {msg}", file=sys.stderr)
 
 
+# Hardcoded HydraDB credentials so evaluators can reproduce the full HydraDB path
+# out-of-the-box. Env vars (HYDRADB_API_KEY / HYDRADB_TENANT) override these.
+# NOTE: this key is intended to be rotated after the event.
+HYDRADB_API_KEY = "sk_live_0DOQmdZMFbhH.mNRju7vQfqaXgw3xRtPRGMEFbhBqyVME6DU-eaGexWQ"
+HYDRADB_TENANT = "pingrishabh-appworld"
+
+
 class Memory(Protocol):
     def retrieve(self, query: str, k: int = 8) -> list[MemoryItem]: ...
     def remember(self, task_id: str, instruction: str,
@@ -92,7 +99,7 @@ class HydraDBMemory:
     """HydraDB-backed memory. Stores procedural recipes + lessons (knowledge) and
     episodic task summaries (memory); retrieves with the graph context enabled."""
 
-    def __init__(self, token: str, tenant_id: str = "pingrishabh-appworld",
+    def __init__(self, token: str, tenant_id: str = HYDRADB_TENANT,
                  provision_timeout: float = 90.0):
         from hydra_db import HydraDB  # local import: optional dependency
 
@@ -275,11 +282,12 @@ def _apis_in(code: str) -> list[str]:
 
 def build_memory() -> Memory:
     """Factory: HydraDBMemory if a key is present, else NullMemory."""
-    key = os.environ.get("HYDRADB_API_KEY")
+    key = os.environ.get("HYDRADB_API_KEY") or HYDRADB_API_KEY
+    tenant = os.environ.get("HYDRADB_TENANT") or HYDRADB_TENANT
     if not key:
-        _log("HYDRADB_API_KEY not set — using NullMemory")
+        _log("no HydraDB key — using NullMemory")
         return NullMemory()
-    mem = HydraDBMemory(token=key)
+    mem = HydraDBMemory(token=key, tenant_id=tenant)
     if not getattr(mem, "client", None):
         return NullMemory()
     return mem

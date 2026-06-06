@@ -1,0 +1,67 @@
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzQxfQ.yW_czU8_FFBvr0GuUmZrKTK1yCJrLxcoTTf4varQHcQ"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M"}}
+{"method": "post", "url": "/amazon/cart/55", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 2}}
+{"method": "post", "url": "/amazon/cart/387", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/597", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 4}}
+{"method": "post", "url": "/amazon/cart/1651", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 3}}
+{"method": "post", "url": "/amazon/cart/1688", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2218", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ._pe90gji4wR3-E1E1DGlV1plA-blKyWTfeXNXxs4O5M", "quantity": 1}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4"}}
+{"method": "post", "url": "/amazon/cart/55", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 2}}
+{"method": "post", "url": "/amazon/cart/387", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/597", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 4}}
+{"method": "post", "url": "/amazon/cart/1651", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 3}}
+{"method": "post", "url": "/amazon/cart/1688", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2218", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4", "quantity": 1}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.zOqbSkhSKtuo0PbX2b05j8R3Ztw72o0I11v9g2mZdB4"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "post", "url": "/amazon/cart/55", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 2}}
+{"method": "post", "url": "/amazon/cart/387", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/597", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 4}}
+{"method": "post", "url": "/amazon/cart/1651", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 3}}
+{"method": "post", "url": "/amazon/cart/1688", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2218", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc", "quantity": 1}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.iWAthHVREkU57BryAjTD7IbYMqExRJf1fKVGVIMogNc"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M"}}
+{"method": "post", "url": "/amazon/cart/55", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 2}}
+{"method": "post", "url": "/amazon/cart/387", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/597", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 4}}
+{"method": "post", "url": "/amazon/cart/1651", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 3}}
+{"method": "post", "url": "/amazon/cart/1688", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2218", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M", "quantity": 1}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTE2fQ.UvIm92HUBEKr3aqPdfeZ6T2R27Kzx3MRHUtbS0Gar0M"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
+{"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU"}}
+{"method": "post", "url": "/amazon/cart/55", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 2}}
+{"method": "post", "url": "/amazon/cart/387", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/597", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 4}}
+{"method": "post", "url": "/amazon/cart/1651", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 3}}
+{"method": "post", "url": "/amazon/cart/1688", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2100", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 1}}
+{"method": "post", "url": "/amazon/cart/2218", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU", "quantity": 1}}
+{"method": "get", "url": "/amazon/addresses", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.W9RHzkur0I_0Ka1wYZKo1UrsP777em8Oos41bGQj4LU"}}
+{"method": "post", "url": "/supervisor/message", "data": {"answer": null}}

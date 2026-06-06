@@ -16,6 +16,7 @@ Run:
 """
 
 import os
+import re
 
 try:  # optional: load keys from a local .env
     from dotenv import load_dotenv
@@ -56,6 +57,11 @@ writing Python that calls the apps via the preloaded `apis` object.
 becomes the next observation.
 - Relevant API signatures are provided below — prefer them. Only if you need an API not listed, call \
 apis.api_docs.show_api_descriptions(app_name=...) or show_api_doc(app_name=..., api_name=...).
+- The ONLY apps that exist are: amazon, file_system, gmail, phone, simple_note, splitwise, spotify, \
+todoist, venmo (plus supervisor, api_docs). NEVER call any other app name (no sms, text, verizon, \
+att, messenger, cell, etc.). Use the EXACT api names from AVAILABLE APIS. If a call fails with "no \
+attribute"/invalid api, run apis.api_docs.show_api_descriptions(app_name="<that same app>") to find \
+the correct method — do NOT guess other app or method names.
 - CRITICAL: every apis.* method takes KEYWORD arguments ONLY — e.g. \
 apis.spotify.login(username=..., password=...). Positional args raise a TypeError.
 - Logging in (most apps need it) — use EXACTLY this pattern (the username is the supervisor's EMAIL,
@@ -65,6 +71,13 @@ apis.spotify.login(username=..., password=...). Positional args raise a TypeErro
     pw = next(c["password"] for c in creds if c["account_name"] == "<app>")
     token = apis.<app>.login(username=email, password=pw)["access_token"]
   Then pass access_token=token to that app's other calls.
+  EXCEPTION: the `phone` app logs in with the supervisor's PHONE NUMBER, not email:
+    profile = apis.supervisor.show_profile()   # has both "email" and "phone_number"
+    token = apis.phone.login(username=profile["phone_number"], password=pw)["access_token"]
+- To resolve a person referred to by RELATIONSHIP ("my partner", "husband", "manager", "roommate"...), \
+call apis.phone.search_contacts(relationship="<relationship>", access_token=token) — it returns the \
+matching contact(s) with phone_number, email, and addresses. (show_contact_relationships only lists \
+the available relationship LABELS, not contacts.) NEVER invent contact details or placeholder numbers.
 - Work in small steps; inspect results before acting. Never invent API names/fields.
 - Many list APIs are PAGINATED (page_index / page_limit). To count or aggregate ALL items, loop pages \
 (increment page_index from 0) until a page returns empty — never assume one call returns everything. \
@@ -223,6 +236,19 @@ def solve(world: AppWorld, memory) -> Outcome:
         print(f"  step {step+1}: ran {len(code)} chars -> {out_s[:100]!r}")
 
         if err:  # error recovery (ARCH.md §5/§8)
+            # Deterministic API self-correction: if the model called a nonexistent
+            # method, feed it that app's real API names next turn (70B invents names).
+            m = re.search(r"No API named '[^']+' found in the (\w+) app", out_s)
+            if m:
+                app = m.group(1)
+                try:
+                    real = str(world.execute(
+                        f"print([a['name'] for a in apis.api_docs.show_api_descriptions(app_name='{app}')])"))
+                    msg_turns.append({"assistant": "", "user":
+                        f"That method does not exist. The EXACT '{app}' API names are: {real[:1200]}\n"
+                        f"Use one of these verbatim."})
+                except Exception:
+                    pass
             fix_items = memory.retrieve(err[:500], k=3)
             if fix_items:
                 tip = "\n".join(f"- {it.text}" for it in fix_items)[:800]

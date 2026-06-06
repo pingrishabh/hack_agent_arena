@@ -1,0 +1,244 @@
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "gmail"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzQxfQ.bXh-gSGTe_kfP8d3ovlON0rBBVmS1UFOCQi4ox4yc3k"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ.wbPNao43acmve2N1Yr5laqrW0JfrK0YlaYET3WyxriE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMxfQ.wbPNao43acmve2N1Yr5laqrW0JfrK0YlaYET3WyxriE"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.tnFDCUywGyTMI-8fCxDSoRmkhWqHMatvFaYupdzOf1Q"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.tnFDCUywGyTMI-8fCxDSoRmkhWqHMatvFaYupdzOf1Q"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.tnFDCUywGyTMI-8fCxDSoRmkhWqHMatvFaYupdzOf1Q"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTU3fQ.tnFDCUywGyTMI-8fCxDSoRmkhWqHMatvFaYupdzOf1Q"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.uCiCQVRQjB2ujE24y7TDyVbv5RFty0E2ZJdpv_Dv954"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.uCiCQVRQjB2ujE24y7TDyVbv5RFty0E2ZJdpv_Dv954"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.uCiCQVRQjB2ujE24y7TDyVbv5RFty0E2ZJdpv_Dv954"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjA0fQ.uCiCQVRQjB2ujE24y7TDyVbv5RFty0E2ZJdpv_Dv954"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.Jxb_ENW73GIngOQCMqrF6XPBpRm0dtmZGKE07Y37kLc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.Jxb_ENW73GIngOQCMqrF6XPBpRm0dtmZGKE07Y37kLc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.Jxb_ENW73GIngOQCMqrF6XPBpRm0dtmZGKE07Y37kLc"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjg3fQ.Jxb_ENW73GIngOQCMqrF6XPBpRm0dtmZGKE07Y37kLc"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDI1fQ.2WtEiNqZeGzlW8dCrzAdVdZ99v1z8Nr8HHP04RvmAqc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDI1fQ.2WtEiNqZeGzlW8dCrzAdVdZ99v1z8Nr8HHP04RvmAqc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDI1fQ.2WtEiNqZeGzlW8dCrzAdVdZ99v1z8Nr8HHP04RvmAqc"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDI1fQ.2WtEiNqZeGzlW8dCrzAdVdZ99v1z8Nr8HHP04RvmAqc"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDQ4fQ.zTZQIMs-K4CsI-q0HODoTup01519K01jtmXlVC9oZX8"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDQ4fQ.zTZQIMs-K4CsI-q0HODoTup01519K01jtmXlVC9oZX8"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDQ4fQ.zTZQIMs-K4CsI-q0HODoTup01519K01jtmXlVC9oZX8"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDQ4fQ.zTZQIMs-K4CsI-q0HODoTup01519K01jtmXlVC9oZX8"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMzfQ.cEmwE3jCaLdoZVBaAi0xWvmtV5LZfvY1O1KpHTGmu8w"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMzfQ.cEmwE3jCaLdoZVBaAi0xWvmtV5LZfvY1O1KpHTGmu8w"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMzfQ.cEmwE3jCaLdoZVBaAi0xWvmtV5LZfvY1O1KpHTGmu8w"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzMzfQ.cEmwE3jCaLdoZVBaAi0xWvmtV5LZfvY1O1KpHTGmu8w"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMjE4fQ.n1pUP1tUP49BofpfxYQ41lFLaa2KF3PABkEINSEtNPU"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMjE4fQ.n1pUP1tUP49BofpfxYQ41lFLaa2KF3PABkEINSEtNPU"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMjE4fQ.n1pUP1tUP49BofpfxYQ41lFLaa2KF3PABkEINSEtNPU"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMjE4fQ.n1pUP1tUP49BofpfxYQ41lFLaa2KF3PABkEINSEtNPU"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMjcwfQ.y0meyEnn40SLYu5Ih1qgANX_LOI-f_gcr9vzgmb0Lek"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNDMzfQ._nKj2DxWFUq83JTyHuv4N32BXqJsVm4kvcPg4bgvPlQ"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNDMzfQ._nKj2DxWFUq83JTyHuv4N32BXqJsVm4kvcPg4bgvPlQ"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNDMzfQ._nKj2DxWFUq83JTyHuv4N32BXqJsVm4kvcPg4bgvPlQ"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNDMzfQ._nKj2DxWFUq83JTyHuv4N32BXqJsVm4kvcPg4bgvPlQ"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTY1fQ.LOENuEnZ8tqpG3tgUH8d83DrpfmDcCH4HmZ_20AX-7s"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"message": "No items purchased.", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTY1fQ.LOENuEnZ8tqpG3tgUH8d83DrpfmDcCH4HmZ_20AX-7s", "recipient_number": "8739267917"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDg4fQ.lDfGvC0BQFOfOw1rtQofGBPxwXPRSxnibuIa3VZYz7g"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDg4fQ.lDfGvC0BQFOfOw1rtQofGBPxwXPRSxnibuIa3VZYz7g"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDg4fQ.lDfGvC0BQFOfOw1rtQofGBPxwXPRSxnibuIa3VZYz7g"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDg4fQ.lDfGvC0BQFOfOw1rtQofGBPxwXPRSxnibuIa3VZYz7g"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyNTEwfQ.E1kQdU3s-ltwuOdXe8BJP8T8qa18SB3DHXTZvUaxDAY"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"message": "No items purchased.", "recipient_number": "8739267917", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyNTEwfQ.E1kQdU3s-ltwuOdXe8BJP8T8qa18SB3DHXTZvUaxDAY"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTU3fQ.EesDW5EZFIpihrIBXM2kXjv0Qbb2g-RP9Kuu6GHCfmM"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTU3fQ.EesDW5EZFIpihrIBXM2kXjv0Qbb2g-RP9Kuu6GHCfmM"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTU3fQ.EesDW5EZFIpihrIBXM2kXjv0Qbb2g-RP9Kuu6GHCfmM"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTU3fQ.EesDW5EZFIpihrIBXM2kXjv0Qbb2g-RP9Kuu6GHCfmM"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMjMxfQ.SO3noocY05GbjqbATaNMoL_JpRrJATZxYmSeqhS91c8"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjI1fQ.QCmpKkNRTaeFKn6Ibnk6tU638heLX6xjDDiCpjR9fhk"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjI1fQ.QCmpKkNRTaeFKn6Ibnk6tU638heLX6xjDDiCpjR9fhk"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjI1fQ.QCmpKkNRTaeFKn6Ibnk6tU638heLX6xjDDiCpjR9fhk"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjI1fQ.QCmpKkNRTaeFKn6Ibnk6tU638heLX6xjDDiCpjR9fhk"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyOTM3fQ.BLxPiZMFSR0I0j-bMxInwKziagXvMegnrG1g_-GqMnU"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyOTM3fQ.BLxPiZMFSR0I0j-bMxInwKziagXvMegnrG1g_-GqMnU", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzY0fQ.mXCtemqvOI_d1j_S6Xp15jQIrr1fPXYZ_KE4bSxbPAE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzY0fQ.mXCtemqvOI_d1j_S6Xp15jQIrr1fPXYZ_KE4bSxbPAE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzY0fQ.mXCtemqvOI_d1j_S6Xp15jQIrr1fPXYZ_KE4bSxbPAE"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzY0fQ.mXCtemqvOI_d1j_S6Xp15jQIrr1fPXYZ_KE4bSxbPAE"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTI4fQ.RgxxH_FyO7RtLXVNo77e3vDsnbBMvvofMDZCAoM46i8"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTI4fQ.RgxxH_FyO7RtLXVNo77e3vDsnbBMvvofMDZCAoM46i8", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDU0fQ.UArlBzpli7cd0WpZpOCVXGhljQG0LUepK5BgmOkK_Lc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDU0fQ.UArlBzpli7cd0WpZpOCVXGhljQG0LUepK5BgmOkK_Lc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDU0fQ.UArlBzpli7cd0WpZpOCVXGhljQG0LUepK5BgmOkK_Lc"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDU0fQ.UArlBzpli7cd0WpZpOCVXGhljQG0LUepK5BgmOkK_Lc"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDExODExfQ.qb__dbz2y_zK0E3UEJyxunxYs2yrkZWibahYdg-wBo8"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjEwfQ.psHUgMzVxhOuMBvEzqkeDcN-RBaqKsV4-u_ZEjJWXCE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjEwfQ.psHUgMzVxhOuMBvEzqkeDcN-RBaqKsV4-u_ZEjJWXCE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjEwfQ.psHUgMzVxhOuMBvEzqkeDcN-RBaqKsV4-u_ZEjJWXCE"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNjEwfQ.psHUgMzVxhOuMBvEzqkeDcN-RBaqKsV4-u_ZEjJWXCE"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyOTU5fQ.4WsMgcnrIRNfl5mnf2H3R6jwHpzpP-VaL4LmkS7FCBw"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyOTU5fQ.4WsMgcnrIRNfl5mnf2H3R6jwHpzpP-VaL4LmkS7FCBw", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTMyfQ.g238gamftSnLHNZ08rb-b8xzx5mEI_8OmodUiQ1GE3M"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTMyfQ.g238gamftSnLHNZ08rb-b8xzx5mEI_8OmodUiQ1GE3M"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTMyfQ.g238gamftSnLHNZ08rb-b8xzx5mEI_8OmodUiQ1GE3M"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMTMyfQ.g238gamftSnLHNZ08rb-b8xzx5mEI_8OmodUiQ1GE3M"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTQyfQ.24P0Mv9umdpMiC-Kzr30O-Dr2VloN5SLpHPhuMSh80k"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyMTQyfQ.24P0Mv9umdpMiC-Kzr30O-Dr2VloN5SLpHPhuMSh80k", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExODUzfQ.JYMrdB6Yrinw_aDe_tnxdJQ2dTrI5m0dZ-PVQMCFFhg"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExODUzfQ.JYMrdB6Yrinw_aDe_tnxdJQ2dTrI5m0dZ-PVQMCFFhg"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExODUzfQ.JYMrdB6Yrinw_aDe_tnxdJQ2dTrI5m0dZ-PVQMCFFhg"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExODUzfQ.JYMrdB6Yrinw_aDe_tnxdJQ2dTrI5m0dZ-PVQMCFFhg"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyNzE3fQ.qW0alBYhazVHYnCLltt691QvoXfoV24IjXCMRvN1Viw"}}
+{"method": "post", "url": "/phone/messages/voice/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyNzE3fQ.qW0alBYhazVHYnCLltt691QvoXfoV24IjXCMRvN1Viw", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTkzfQ.eX9wPxxbMOG35nbHYfM3Y9WdEMp1eb8mX1myg2Uq9C0"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTkzfQ.eX9wPxxbMOG35nbHYfM3Y9WdEMp1eb8mX1myg2Uq9C0"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTkzfQ.eX9wPxxbMOG35nbHYfM3Y9WdEMp1eb8mX1myg2Uq9C0"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTkzfQ.eX9wPxxbMOG35nbHYfM3Y9WdEMp1eb8mX1myg2Uq9C0"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyOTM0fQ.PggvVt7BkdBvGhj8sFT9Z8yvhKALjV5G-hB9xCV7EYs"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExOTA3fQ.b1ZLzEY_VaQLNKijr4MG7ZJHhdvMBvi9vJFALhjijo0"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExOTA3fQ.b1ZLzEY_VaQLNKijr4MG7ZJHhdvMBvi9vJFALhjijo0"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExOTA3fQ.b1ZLzEY_VaQLNKijr4MG7ZJHhdvMBvi9vJFALhjijo0"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDExOTA3fQ.b1ZLzEY_VaQLNKijr4MG7ZJHhdvMBvi9vJFALhjijo0"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyODM4fQ.JYbJavdR5kCpQ9VbjXg2FJ5l46pVZc1yGBnUaFz7Kq8"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyODM4fQ.JYbJavdR5kCpQ9VbjXg2FJ5l46pVZc1yGBnUaFz7Kq8", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzkzfQ.ffLk0usIKjNU96cSc_gU0P8w3UGQQjkqVXtTQ84HWEE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzkzfQ.ffLk0usIKjNU96cSc_gU0P8w3UGQQjkqVXtTQ84HWEE"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzkzfQ.ffLk0usIKjNU96cSc_gU0P8w3UGQQjkqVXtTQ84HWEE"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMzkzfQ.ffLk0usIKjNU96cSc_gU0P8w3UGQQjkqVXtTQ84HWEE"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyODgxfQ.WpgDuHousd_s7Jrdyu_MdPVp1STGvGxM4AJaI0EZIac"}}
+{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyODgxfQ.WpgDuHousd_s7Jrdyu_MdPVp1STGvGxM4AJaI0EZIac", "recipient_number": "8739267917", "message": "No items purchased."}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTAzfQ.Q5Y3WQOFF-rqExMOhFEXkxX0stDL5feKc_jny5xPPDc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTAzfQ.Q5Y3WQOFF-rqExMOhFEXkxX0stDL5feKc_jny5xPPDc"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTAzfQ.Q5Y3WQOFF-rqExMOhFEXkxX0stDL5feKc_jny5xPPDc"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNTAzfQ.Q5Y3WQOFF-rqExMOhFEXkxX0stDL5feKc_jny5xPPDc"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDEyNTQzfQ.Ebh27Sk0NoofDZInVzyYy2ecNGPV9sCc9ANdOcf81iA"}}
+{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
+{"method": "post", "url": "/gmail/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": "}v0#GvJ"}}
+{"method": "get", "url": "/gmail/email_threads/category/inbox", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzkwfQ.reY8cmjRzAHJzOJlwCZxooBBn2xIWmhIACprP8C7y80"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzkwfQ.reY8cmjRzAHJzOJlwCZxooBBn2xIWmhIACprP8C7y80"}}
+{"method": "get", "url": "/gmail/emails/20872", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzkwfQ.reY8cmjRzAHJzOJlwCZxooBBn2xIWmhIACprP8C7y80"}}
+{"method": "get", "url": "/gmail/emails/20868", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtwYV9yaXR0ZXJAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyNzkwfQ.reY8cmjRzAHJzOJlwCZxooBBn2xIWmhIACprP8C7y80"}}
+{"method": "post", "url": "/amazon/auth/token", "data": {"username": "pa_ritter@gmail.com", "password": ")Lun@YH"}}
+{"method": "get", "url": "/supervisor/profile", "data": {}}
+{"method": "post", "url": "/phone/auth/token", "data": {"username": "2444880289", "password": "Xm4bukk"}}
+{"method": "get", "url": "/phone/contacts", "data": {"relationship": "husband", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDExOTI2fQ.Y-rN1TWy7604TqYU8cYpMhXDbPrehwtW4MvJ3DRalPg"}}
+{"method": "post", "url": "/phone/messages/text/8739267917", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSsyNDQ0ODgwMjg5IiwiZXhwIjoxNjg0NDExOTI2fQ.Y-rN1TWy7604TqYU8cYpMhXDbPrehwtW4MvJ3DRalPg", "message": "No items purchased."}}
