@@ -51,6 +51,9 @@ then beat everyone else.
 - **Submission:** zip `experiments/outputs/$APPWORLD_EXPERIMENT/` (must include
   `evaluations/test_normal.json` and `tasks/<id>/dbs/`).
 - **Bonus:** integrating **HydraDB** earns extra credit.
+- **Architecture:** the binding end-to-end design lives in **`ARCH.md`** — the agent we implement
+  against (boundaries, HydraDB memory model, reasoning roles, per-turn flow). Keep it in sync with
+  these rules; if a rule here changes, update `ARCH.md`.
 
 ## Current Setup
 
