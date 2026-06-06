@@ -6,6 +6,17 @@ email = apis.supervisor.show_profile()["email"]
 creds = apis.supervisor.show_account_passwords()
 pw = next(c["password"] for c in creds if c["account_name"] == "gmail")
 token = apis.gmail.login(username=email, password=pw)["access_token"]
+print(f"Logged in to Gmail with access token: {token}")
+```
+
+```
+Logged in to Gmail with access token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJnbWFpbCtrYXRfc2ltcEBnbWFpbC5jb20iLCJleHAiOjE2ODQ0MTIwOTh9.ChdP7jyPQYnkUJXZBywOBrJmq36axbD0MMgSYdFGSGI
+```
+
+
+### Environment Interaction 2
+----------------------------------------------------------------------------
+```python
 drafts = []
 page_index = 0
 while True:
@@ -15,6 +26,17 @@ while True:
         break
     page_index += 1
 empty_drafts = [draft for draft in drafts if not draft['subject'] or not draft['body']]
+print(f"Found {len(drafts)} drafts, {len(empty_drafts)} of which have empty subject or body")
+```
+
+```
+Found 17 drafts, 8 of which have empty subject or body
+```
+
+
+### Environment Interaction 3
+----------------------------------------------------------------------------
+```python
 for draft in empty_drafts:
     print(f"Deleting draft with draft_id: {draft['draft_id']}")
     apis.gmail.delete_draft(draft_id=draft['draft_id'], access_token=token)
@@ -34,13 +56,9 @@ Deleted empty drafts
 ```
 
 
-### Environment Interaction 2
+### Environment Interaction 4
 ----------------------------------------------------------------------------
 ```python
-email = apis.supervisor.show_profile()["email"]
-creds = apis.supervisor.show_account_passwords()
-pw = next(c["password"] for c in creds if c["account_name"] == "gmail")
-token = apis.gmail.login(username=email, password=pw)["access_token"]
 remaining_drafts = []
 page_index = 0
 while True:
@@ -49,8 +67,8 @@ while True:
     if len(response) < 20:
         break
     page_index += 1
-empty_drafts = [draft for draft in remaining_drafts if not draft['subject'] or not draft['body']]
-if len(empty_drafts) == 0:
+empty_remaining_drafts = [draft for draft in remaining_drafts if not draft['subject'] or not draft['body']]
+if len(empty_remaining_drafts) == 0:
     print("All empty drafts have been successfully deleted")
 else:
     print("Some empty drafts were not deleted")
@@ -61,7 +79,7 @@ All empty drafts have been successfully deleted
 ```
 
 
-### Environment Interaction 3
+### Environment Interaction 5
 ----------------------------------------------------------------------------
 ```python
 try:
@@ -84,7 +102,7 @@ FINISH: NONE
 ```
 
 
-### Environment Interaction 4
+### Environment Interaction 6
 ----------------------------------------------------------------------------
 ```python
 apis.supervisor.complete_task = __ORIG_COMPLETE__

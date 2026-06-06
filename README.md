@@ -12,8 +12,8 @@ apps' APIs.
   signatures ingested as `knowledge`, queried with graph context, fused with a local BM25 floor via
   reciprocal-rank fusion), and (2) **cross-task memory** (episodic task summaries + versioned
   procedural recipes, consolidated at task end).
-- **Self-reported score:** TGC `20.0` / SGC `20.0` (from `appworld evaluate` on `agent_arena_eval`;
-  2/10 — the challenge set is 3 easy / 3 medium / 4 hard).
+- **Self-reported score:** TGC `30.0` / SGC `30.0` (from `appworld evaluate` on `agent_arena_eval`;
+  3/10 — the challenge set is 3 easy / 3 medium / 4 hard).
 - **Integrity:** general agent — **no `task_id` hardcoding**, no per-task answers.
 
 ## Architecture (see [`ARCH.md`](ARCH.md) for the full design)

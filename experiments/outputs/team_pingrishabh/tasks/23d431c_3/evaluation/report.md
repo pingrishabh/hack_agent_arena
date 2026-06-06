@@ -1,14 +1,24 @@
 ──────────────────────────────── Overall Stats ─────────────────────────────────
-Num Passed Tests : 2
-Num Failed Tests : 6
+Num Passed Tests : 1
+Num Failed Tests : 7
 Num Total  Tests : 8
 ──────────────────────────────────── Passes ────────────────────────────────────
->> Passed Requirement
-assert answers match.
 >> Passed Requirement
 assert 0 records have been updated or deleted from amazon.Address using
 models.changed_records.
 ──────────────────────────────────── Fails ─────────────────────────────────────
+>> Failed Requirement
+assert answers match.
+```python
+with test(
+    """
+    assert answers match.
+    """
+):
+    test.answer(predicted_answer, ground_truth_answer)
+```
+----------
+AssertionError:  'fossil grant chronograph watch' == 'null'
 >> Failed Requirement
 assert model changes match
 amazon.Order, amazon.OrderItem, amazon.Product,
@@ -31,14 +41,14 @@ amazon.Address.
 AssertionError:
 set()
 ==
-{'gmail.GlobalEmailThread', 'gmail.UserEmailThread', 'file_system.File',
-'amazon.Order', 'gmail.Attachment', 'gmail.Email', 'amazon.Product',
-'file_system.Directory', 'amazon.OrderItem'}
+{'file_system.File', 'amazon.Product', 'gmail.Email', 'gmail.Attachment',
+'file_system.Directory', 'amazon.Order', 'gmail.GlobalEmailThread',
+'amazon.OrderItem', 'gmail.UserEmailThread'}
 
 In right but not left:
-['gmail.GlobalEmailThread', 'gmail.UserEmailThread', 'file_system.File',
-'amazon.Order', 'gmail.Attachment', 'gmail.Email', 'amazon.Product',
-'file_system.Directory', 'amazon.OrderItem']
+['file_system.File', 'amazon.Product', 'gmail.Email', 'gmail.Attachment',
+'file_system.Directory', 'amazon.Order', 'gmail.GlobalEmailThread',
+'amazon.OrderItem', 'gmail.UserEmailThread']
 >> Failed Requirement
 assert there is 1 new amazon.Order using models.changed_records.
 ```python

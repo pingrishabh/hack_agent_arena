@@ -1,6 +1,21 @@
 {
-    "phone": {
-        "GlobalTextMessage": 1,
-        "UserTextMessage": 2
+    "admin": {
+        "PaymentCard": 1
+    },
+    "amazon": {
+        "Order": 1,
+        "OrderItem": 2,
+        "Product": 2,
+        "CartEntry": 1
+    },
+    "file_system": {
+        "File": 1,
+        "Directory": 2
+    },
+    "gmail": {
+        "Email": 1,
+        "Attachment": 1,
+        "GlobalEmailThread": 1,
+        "UserEmailThread": 2
     }
 }

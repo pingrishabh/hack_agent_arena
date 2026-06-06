@@ -3,3 +3,6 @@
 ["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["yUECK8GRtmo=",10000000000.0,12],false]
 ["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["gAzROUoh9qY=",10000000000.0,13],false]
 ["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["D0ADAeyIKBo=",10000000000.0,14],false]
+["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["EfgvBHtYfTQ=",9999994565.4,11],false]
+["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["DMFyAPNhaOs=",9999989940.4,11],false]
+["UPDATE payment_cards SET record_hash=?, balance=? WHERE payment_cards.id = ?",["QWG15dkHrqE=",9999989858.4,11],false]

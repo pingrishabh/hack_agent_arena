@@ -1,4 +1,23 @@
 {
+    "amazon": {
+        "CartEntry": 14,
+        "Order": 3,
+        "OrderItem": 5,
+        "Product": 5
+    },
+    "admin": {
+        "PaymentCard": 3
+    },
+    "file_system": {
+        "File": 3,
+        "Directory": 2
+    },
+    "gmail": {
+        "Email": 3,
+        "Attachment": 3,
+        "GlobalEmailThread": 3,
+        "UserEmailThread": 6
+    },
     "supervisor": {
         "Task": 1
     }

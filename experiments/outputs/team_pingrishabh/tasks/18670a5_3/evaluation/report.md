@@ -1,24 +1,14 @@
 ──────────────────────────────── Overall Stats ─────────────────────────────────
-Num Passed Tests : 1
-Num Failed Tests : 9
+Num Passed Tests : 2
+Num Failed Tests : 8
 Num Total  Tests : 10
 ──────────────────────────────────── Passes ────────────────────────────────────
+>> Passed Requirement
+assert answers match.
 >> Passed Requirement
 obtain added, updated, deleted gmail.Draft using models.changed_records, and
 assert 0 is updated, 0 is deleted.
 ──────────────────────────────────── Fails ─────────────────────────────────────
->> Failed Requirement
-assert answers match.
-```python
-with test(
-    """
-    assert answers match.
-    """
-):
-    test.answer(predicted_answer, ground_truth_answer)
-```
-----------
-AssertionError:  'none' == 'null'
 >> Failed Requirement
 assert model changes match gmail.Draft.
 ```python

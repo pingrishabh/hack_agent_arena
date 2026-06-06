@@ -1,5 +1,0 @@
-["INSERT INTO global_text_messages (created_at, record_hash, sender_id, receiver_id, message) VALUES (?, ?, ?, ?, ?)",["2023-05-18 12:00:00.000000","NpGvbGwynfA=",94,93,"No items purchased."],false]
-["INSERT INTO user_text_messages (created_at, record_hash, global_text_message_id, user_id) VALUES (?, ?, ?, ?)",["2023-05-18 12:00:00.000000","7ClcE4wrG6I=",8397,94],false]
-["INSERT INTO user_text_messages_fts (id, saved_search_text) VALUES (?, ?)",[16793,"no items purchased. patricia ritter brian ritter"],false]
-["INSERT INTO user_text_messages (created_at, record_hash, global_text_message_id, user_id) VALUES (?, ?, ?, ?)",["2023-05-18 12:00:00.000000","OdfBfgIq0yI=",8397,93],false]
-["INSERT INTO user_text_messages_fts (id, saved_search_text) VALUES (?, ?)",[16794,"no items purchased. patricia ritter brian ritter"],false]

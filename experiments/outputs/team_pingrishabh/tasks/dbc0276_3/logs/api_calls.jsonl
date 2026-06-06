@@ -3,36 +3,8 @@
 {"method": "post", "url": "/amazon/auth/token", "data": {"username": "brenda.webe@gmail.com", "password": "{(u%}@f"}}
 {"method": "get", "url": "/amazon/wish_list", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbWF6b24rYnJlbmRhLndlYmVAZ21haWwuY29tIiwiZXhwIjoxNjg0NDEyMDk4fQ.3IjKCv6BCs7qPZSHTJNh-1EJUpXhtcq201G71jRluH0"}}
 {"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "get", "url": "/phone/contacts", "data": {"relationship": "partner", "access_token": null}}
 {"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
 {"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
 {"method": "get", "url": "/phone/contacts", "data": {"relationship": "partner", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNzQxfQ.ncNXlKCmHhwFC6rOOEJ4XT_JN6BrQZLAnbEipZFwP50"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"relationship": "partner", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNzMxfQ.EK6VuNJfNjHbLO4STfVZ2eXb2yQGsJrmK7eMOFsFJq0"}}
-{"method": "get", "url": "/api_docs/api_descriptions", "data": {"app_name": "phone"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"relationship": "partner", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyMTU3fQ.rHgZeC6ltHFvystJmz5vkIZURVYj9NbT74_Mghhzxsk"}}
-{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyMTU3fQ.rHgZeC6ltHFvystJmz5vkIZURVYj9NbT74_Mghhzxsk", "recipient_phone_number": "7196131136", "message": "3M Scotch 8-in Cable Ties => $5\nSawyer Products Mini Water Filtration System => $25\nHamilton Beach 8-Cup Compact Food Processor => $30\nCraftsman 8-Inch Arc Joint Pliers => $9\nHusky Adjustable Height Work Table => $199\nAscend Trekking Poles => $30\nOXO Good Grips\u00ae Stainless Steel Soap Dispenser => $20"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"relationship": "partner", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNjA0fQ.QfoW6mQiv6PRDfQ8Sp2UKwyPUyqRc6z-_l_YGCqil5g"}}
-{"method": "post", "url": "/phone/messages/text/{phone_number}", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNjA0fQ.QfoW6mQiv6PRDfQ8Sp2UKwyPUyqRc6z-_l_YGCqil5g", "recipient_phone_number": "7196131136", "message": "3M Scotch 8-in Cable Ties => $5\nSawyer Products Mini Water Filtration System => $25\nHamilton Beach 8-Cup Compact Food Processor => $30\nCraftsman 8-Inch Arc Joint Pliers => $9\nHusky Adjustable Height Work Table => $199\nAscend Trekking Poles => $30\nOXO Good Grips\u00ae Stainless Steel Soap Dispenser => $20"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNTE2fQ.HQppK6mbBfVpi4QSqUwruizZiVdIeP_dB8Xurjka6SI"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNjg3fQ.7iL3q--SBrrObYoJ9I1k4jU4cuvHMf_snqM956riOTY"}}
-{"method": "get", "url": "/supervisor/account_passwords", "data": {}}
-{"method": "get", "url": "/supervisor/profile", "data": {}}
-{"method": "post", "url": "/phone/auth/token", "data": {"username": "9312015677", "password": "N^ssqde"}}
-{"method": "get", "url": "/phone/contacts", "data": {"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyODM4fQ.qaODd6gpef4WhJFs0NW1mae706kqaMXCOwOVPOh7XOA"}}
+{"method": "post", "url": "/phone/messages/text/7196131136", "data": {"message": "3M Scotch 8-in Cable Ties => $5\nSawyer Products Mini Water Filtration System => $25\nHamilton Beach 8-Cup Compact Food Processor => $30\nCraftsman 8-Inch Arc Joint Pliers => $9\nHusky Adjustable Height Work Table => $199\nAscend Trekking Poles => $30\nOXO Good Grips\u00ae Stainless Steel Soap Dispenser => $20", "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJwaG9uZSs5MzEyMDE1Njc3IiwiZXhwIjoxNjg0NDEyNzQxfQ.ncNXlKCmHhwFC6rOOEJ4XT_JN6BrQZLAnbEipZFwP50"}}
 {"method": "post", "url": "/supervisor/message", "data": {"answer": null}}

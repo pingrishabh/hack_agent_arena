@@ -1,8 +1,22 @@
 {
     "amazon": {
-        "CartEntry": 35
+        "WishListEntry": 7,
+        "CartEntry": 8,
+        "Order": 1,
+        "OrderItem": 12,
+        "Product": 12
     },
-    "supervisor": {
-        "Task": 1
+    "admin": {
+        "PaymentCard": 1
+    },
+    "file_system": {
+        "File": 1,
+        "Directory": 2
+    },
+    "gmail": {
+        "Email": 1,
+        "Attachment": 1,
+        "GlobalEmailThread": 1,
+        "UserEmailThread": 2
     }
 }
