@@ -11,5 +11,6 @@ data/
 experiments/
 logs/
 
-# Derived API catalog (rebuilt locally on first run)
+# Derived API catalog + HydraDB ingest marker (rebuilt locally on first run)
 .api_catalog.json
+.api_hydra_ingested
