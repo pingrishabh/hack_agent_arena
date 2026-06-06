@@ -105,6 +105,55 @@ class ApiIndex:
         return [self.entries[i]["sig"] for _, i in scores[:k]]
 
 
+def _sig_key(sig: str) -> str:
+    """Normalize a signature to 'app.api' for dedup across retrievers."""
+    return (sig.split("(", 1)[0] or sig).strip().lower()
+
+
+def _rrf(ranked_lists: list[list[str]], k: int, c: int = 60) -> list[str]:
+    """Reciprocal-rank fusion of multiple ranked signature lists."""
+    scores: dict[str, float] = {}
+    repr_sig: dict[str, str] = {}
+    for lst in ranked_lists:
+        for rank, sig in enumerate(lst):
+            key = _sig_key(sig)
+            scores[key] = scores.get(key, 0.0) + 1.0 / (c + rank)
+            repr_sig.setdefault(key, sig)
+    ordered = sorted(scores, key=lambda key: scores[key], reverse=True)
+    return [repr_sig[key] for key in ordered[:k]]
+
+
+class ApiRetriever:
+    """Hybrid API retrieval: BM25 (local, always-on floor) + optional HydraDB
+    semantic. Modes: 'bm25' | 'hydra' | 'hybrid'. Any HydraDB failure or empty
+    result silently falls back to BM25 — the token-critical path never goes dark.
+    """
+
+    def __init__(self, bm25: ApiIndex, hydra_query=None, mode: str = "hybrid"):
+        self.bm25 = bm25
+        self.hydra_query = hydra_query
+        self.mode = mode if mode in ("bm25", "hydra", "hybrid") else "hybrid"
+
+    def _safe_hydra(self, query: str, k: int) -> list[str]:
+        if not self.hydra_query:
+            return []
+        try:
+            return self.hydra_query(query, k) or []
+        except Exception:
+            return []
+
+    def retrieve(self, query: str, k: int = 12) -> list[str]:
+        bm = self.bm25.retrieve(query, k)
+        if self.mode == "bm25" or not self.hydra_query:
+            return bm
+        hs = self._safe_hydra(query, k)
+        if not hs:
+            return bm  # floor / fallback
+        if self.mode == "hydra":
+            return hs[:k]
+        return _rrf([hs, bm], k)  # hybrid
+
+
 _INDEX: ApiIndex | None = None
 
 

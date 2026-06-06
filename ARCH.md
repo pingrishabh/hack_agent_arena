@@ -125,11 +125,15 @@ All roles go through the one `call_llm`. Each returns a parsed result; parsing i
 ## 5b. Token Efficiency (the free tier is 100k tokens/day — see CLAUDE.md note)
 
 Per-task token use is the binding operational constraint. Mitigations:
-- **Offline API-retrieval index (`apidocs.py`).** The 457 API docs load via local Python (zero LLM
+- **Hybrid API-retrieval index (`apidocs.py`).** The 457 API docs load via local Python (zero LLM
   tokens). We build a cached BM25 catalog once and inject only the top-k relevant API *signatures*
   into the prompt — replacing runtime `api_docs` discovery, whose large output otherwise lands in
-  context and is re-sent every turn (the biggest token sink). This is the semantic/API-retrieval
-  layer done in-process; HydraDB semantic retrieval supplements it.
+  context and is re-sent every turn (the biggest token sink). Retrieval is **hybrid** (`ApiRetriever`,
+  `API_RETRIEVAL=bm25|hydra|hybrid`): **BM25 is the always-on local floor**; the same API signatures
+  are also ingested into **HydraDB** (`kind='api'`) and retrieved semantically, then fused with BM25
+  via reciprocal-rank fusion. Any HydraDB failure/empty result falls back to BM25 — the token-critical
+  path never goes dark. (Measured offline: HydraDB recovers APIs BM25 misses, e.g. `venmo.create_transaction`
+  for "pay my roommate", where BM25 returned only balance APIs.)
 - **Observation truncation** (`OBS_CAP`) before re-feeding big API responses.
 - **Slim system prompt** (paid every turn) + **tight `CONTEXT_BUDGET`** with old-turn dropping.
 - **Conditional roles** (`USE_PLAN`, `USE_VERIFY`) and lower `ACT_MAX_TOKENS`.

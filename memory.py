@@ -66,17 +66,23 @@ class NullMemory:
     def remember(self, task_id, instruction, turns, outcome) -> None:
         return None
 
+    def ingest_api_catalog(self, entries) -> None:
+        return None
+
+    def query_api(self, query: str, k: int = 12) -> list[str]:
+        return []
+
     def close(self) -> None:
         return None
 
 
 def _chunk_text(chunk) -> str:
-    for attr in ("text", "content", "chunk"):
+    for attr in ("chunk_content", "content", "text", "chunk"):
         v = getattr(chunk, attr, None)
         if isinstance(v, str) and v:
             return v
     if isinstance(chunk, dict):
-        for key in ("text", "content", "chunk"):
+        for key in ("chunk_content", "content", "text", "chunk"):
             if isinstance(chunk.get(key), str):
                 return chunk[key]
     return str(chunk)
@@ -176,10 +182,56 @@ class HydraDBMemory:
                 tenant_id=self.tenant_id,
                 type="knowledge",
                 documents=[(f"{meta.get('kind','doc')}-{meta.get('task_id','x')}.txt", text)],
-                document_metadata=json.dumps(meta),
+                document_metadata=json.dumps([meta]),  # HydraDB wants a JSON array
             )  # fire-and-forget
         except Exception as e:
             _log(f"ingest(knowledge) failed: {type(e).__name__}: {e}")
+
+    # ---- API-doc semantic layer (hybrid retrieval) ----------------------
+    def ingest_api_catalog(self, entries: list[dict]) -> None:
+        """Idempotent bulk ingest of API signatures as knowledge (kind='api').
+        Uses a local marker so we only ingest once per catalog version."""
+        if not self.client or not self.ready or not entries:
+            return
+        import hashlib
+        marker = os.path.join(os.path.dirname(__file__), ".api_hydra_ingested")
+        digest = hashlib.md5(json.dumps([e["sig"] for e in entries]).encode()).hexdigest()
+        try:
+            if os.path.exists(marker) and open(marker).read().strip() == digest:
+                return
+        except Exception:
+            pass
+        try:
+            docs = [(f"{e['app']}_{e['api']}.txt", e["sig"]) for e in entries]
+            metas = [{"kind": "api", "app": e["app"], "api": e["api"]} for e in entries]
+            self.client.context.ingest(
+                tenant_id=self.tenant_id, type="knowledge", upsert=True,
+                documents=docs, document_metadata=json.dumps(metas),
+            )
+            with open(marker, "w") as f:
+                f.write(digest)
+            _log(f"ingested {len(entries)} API signatures into HydraDB (indexing async)")
+        except Exception as e:
+            _log(f"ingest_api_catalog failed: {type(e).__name__}: {e}")
+
+    def query_api(self, query: str, k: int = 12) -> list[str]:
+        """Semantic retrieval over the ingested API signatures (kind='api')."""
+        if not self.client:
+            return []
+        for filt in ({"kind": "api"}, None):  # try filtered, then unfiltered
+            try:
+                kwargs = dict(tenant_id=self.tenant_id, query=query[:2000], type="knowledge",
+                              query_by="hybrid", max_results=k, graph_context=True)
+                if filt:
+                    kwargs["metadata_filters"] = filt
+                resp = self.client.query(**kwargs)
+                chunks = getattr(resp.data, "chunks", None) or []
+                out = [_chunk_text(c) for c in chunks]
+                if out:
+                    return out[:k]
+            except Exception:
+                continue
+        return []
 
     @staticmethod
     def _summarize(task_id, instruction, turns, outcome) -> str:

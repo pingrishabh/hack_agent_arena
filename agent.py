@@ -47,6 +47,7 @@ API_TOPK = int(os.environ.get("API_TOPK", "12"))           # API signatures inje
 ACT_MAX_TOKENS = int(os.environ.get("ACT_MAX_TOKENS", "900"))
 USE_PLAN = os.environ.get("USE_PLAN", "1") != "0"
 USE_VERIFY = os.environ.get("USE_VERIFY", "1") != "0"
+API_RETRIEVAL = os.environ.get("API_RETRIEVAL", "hybrid")   # bm25 | hydra | hybrid
 
 SYSTEM_PROMPT = """You are an autonomous coding agent in AppWorld. Solve the supervisor's task by \
 writing Python that calls the apps via the preloaded `apis` object.
@@ -73,6 +74,25 @@ def call_llm(messages: list[dict], system: str = SYSTEM_PROMPT, max_tokens: int 
         num_retries=8,   # ride out free-tier rate limits (429) with backoff
     )
     return resp.choices[0].message.content or ""
+
+
+_RETRIEVER = None
+
+
+def _get_retriever(world, memory):
+    """Build the API retriever once: BM25 floor + (idempotent) HydraDB catalog
+    ingest + semantic query. Falls back to BM25 if HydraDB is unavailable."""
+    global _RETRIEVER
+    if _RETRIEVER is None:
+        bm25 = apidocs.get_index(world.apis)
+        try:
+            memory.ingest_api_catalog(bm25.entries)  # one-time, fire-and-forget
+        except Exception:
+            pass
+        _RETRIEVER = apidocs.ApiRetriever(
+            bm25, hydra_query=getattr(memory, "query_api", None), mode=API_RETRIEVAL
+        )
+    return _RETRIEVER
 
 
 def _truncate_obs(text: str, cap: int = OBS_CAP) -> str:
@@ -110,7 +130,7 @@ def solve(world: AppWorld, memory) -> Outcome:
     # Offline API retrieval (no LLM tokens) — inject only the relevant signatures
     # instead of letting the agent dump api_docs into context every task.
     try:
-        api_sigs = apidocs.get_index(world.apis).retrieve(instruction, k=API_TOPK)
+        api_sigs = _get_retriever(world, memory).retrieve(instruction, k=API_TOPK)
     except Exception:
         api_sigs = []
 
