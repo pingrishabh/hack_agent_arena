@@ -122,6 +122,21 @@ All roles go through the one `call_llm`. Each returns a parsed result; parsing i
 - `reflect(trajectory, outcome) -> Lessons` — once/task; summarize what worked/failed → feeds
   `consolidate` into procedural recipes + entity/semantic updates.
 
+## 5b. Token Efficiency (the free tier is 100k tokens/day — see CLAUDE.md note)
+
+Per-task token use is the binding operational constraint. Mitigations:
+- **Offline API-retrieval index (`apidocs.py`).** The 457 API docs load via local Python (zero LLM
+  tokens). We build a cached BM25 catalog once and inject only the top-k relevant API *signatures*
+  into the prompt — replacing runtime `api_docs` discovery, whose large output otherwise lands in
+  context and is re-sent every turn (the biggest token sink). This is the semantic/API-retrieval
+  layer done in-process; HydraDB semantic retrieval supplements it.
+- **Observation truncation** (`OBS_CAP`) before re-feeding big API responses.
+- **Slim system prompt** (paid every turn) + **tight `CONTEXT_BUDGET`** with old-turn dropping.
+- **Conditional roles** (`USE_PLAN`, `USE_VERIFY`) and lower `ACT_MAX_TOKENS`.
+
+Even optimized (~2–3k tokens/task) a full 168-task run exceeds 100k/day → spread across days via the
+resume harness, or use a higher Groq tier.
+
 ## 6. Context Manager (`context.py`)
 
 - `assemble(system, plan, retrieved, turns, budget) -> messages` — packs, in priority order: system
@@ -191,10 +206,11 @@ def solve(world, memory):
 ## 11. File Map
 
 ```
-agent.py    # orchestrator + call_llm boundary + SYSTEM_PROMPT
+agent.py    # orchestrator + call_llm boundary + SYSTEM_PROMPT + token knobs
 roles.py    # plan / act / self_verify / reflect
-memory.py   # Memory seam + HydraDBMemory (+ NullMemory/stub until key)
+memory.py   # Memory seam + HydraDBMemory (+ NullMemory fallback)
 context.py  # token-budgeted assembly
+apidocs.py  # offline API-retrieval index (BM25 over the 457 docs; the #1 token saver)
 run.py      # task loop, checkpoint/resume, eval helper
 ```
 

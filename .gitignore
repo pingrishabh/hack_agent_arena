@@ -10,3 +10,6 @@ __pycache__/
 data/
 experiments/
 logs/
+
+# Derived API catalog (rebuilt locally on first run)
+.api_catalog.json

@@ -26,6 +26,7 @@ except Exception:
 import litellm
 from appworld import AppWorld
 
+import apidocs
 import context
 import roles
 import run
@@ -38,39 +39,33 @@ EXPERIMENT = os.environ.get("APPWORLD_EXPERIMENT", "team_demo")
 MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "30"))
 MAX_TASKS = int(os.environ.get("MAX_TASKS", "0"))            # 0 = all tasks in split
 RESUME = os.environ.get("RESUME", "1") != "0"               # skip already-run tasks
-CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "7000"))
+CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "4500"))
 MAX_VERIFY_REJECTIONS = int(os.environ.get("MAX_VERIFY_REJECTIONS", "2"))
+# Token-saving knobs (see ARCH.md §6 / token budget):
+OBS_CAP = int(os.environ.get("OBS_CAP", "1200"))            # max chars per observation re-fed to model
+API_TOPK = int(os.environ.get("API_TOPK", "12"))           # API signatures injected per task (offline index)
+ACT_MAX_TOKENS = int(os.environ.get("ACT_MAX_TOKENS", "900"))
+USE_PLAN = os.environ.get("USE_PLAN", "1") != "0"
+USE_VERIFY = os.environ.get("USE_VERIFY", "1") != "0"
 
-SYSTEM_PROMPT = """You are an autonomous coding agent operating inside AppWorld.
-You complete the supervisor's task by writing Python code that the environment executes.
+SYSTEM_PROMPT = """You are an autonomous coding agent in AppWorld. Solve the supervisor's task by \
+writing Python that calls the apps via the preloaded `apis` object.
 
-RULES:
-- Reply with EXACTLY ONE Python code block per turn, nothing else:
-  ```python
-  # your code
-  ```
-- A preloaded object `apis` is the ONLY way to interact with the apps. Whatever
-  you print() is returned to you as the next observation.
-- You do NOT know the APIs in advance. Discover them at runtime:
-    print(apis.api_docs.show_app_descriptions())
-    print(apis.api_docs.show_api_descriptions(app_name='<app>'))
-    print(apis.api_docs.show_api_doc(app_name='<app>', api_name='<api>'))
-- To act on the supervisor's accounts, get credentials and log in:
-    print(apis.supervisor.show_account_passwords())
-    # then call that app's login API to get an access_token, and pass it onward.
-- Work in small steps: inspect results before the next action. Never invent API
-  names or fields — look them up first.
-- Grading is state-based: leaving the apps' databases in exactly the right state
-  is what passes. Avoid unintended side effects (wrong payee, spam, etc.).
-- When the task is FULLY done, do NOT call apis.supervisor.complete_task yourself.
-  Instead reply with a single line and no code:
-    FINISH: <answer or NONE>
-  (give <answer> only for question tasks; otherwise NONE). A verifier checks your
-  work and completes the task for you.
+- Reply with EXACTLY ONE ```python code block per turn (or the FINISH line). Whatever you print() \
+becomes the next observation.
+- Relevant API signatures are provided below — prefer them. Only if you need an API not listed, call \
+apis.api_docs.show_api_descriptions(app_name=...) or show_api_doc(app_name=..., api_name=...).
+- Log in when needed: apis.supervisor.show_account_passwords(), then the app's login API to get an \
+access_token; pass it to later calls.
+- Work in small steps; inspect results before acting. Never invent API names/fields.
+- Grading is state-based: leave the databases in exactly the right state; avoid wrong or extra side \
+effects.
+- When FULLY done, do NOT call complete_task yourself — reply a single line, no code:
+  FINISH: <answer or NONE>   (answer only for question tasks). A verifier checks your work.
 """
 
 
-def call_llm(messages: list[dict], system: str = SYSTEM_PROMPT, max_tokens: int = 1500) -> str:
+def call_llm(messages: list[dict], system: str = SYSTEM_PROMPT, max_tokens: int = 900) -> str:
     resp = litellm.completion(
         model=MODEL,
         messages=[{"role": "system", "content": system}, *messages],
@@ -80,8 +75,20 @@ def call_llm(messages: list[dict], system: str = SYSTEM_PROMPT, max_tokens: int 
     return resp.choices[0].message.content or ""
 
 
-def _build_head(instruction: str, supervisor: str, plan_text: str, retrieved: str) -> str:
+def _truncate_obs(text: str, cap: int = OBS_CAP) -> str:
+    """Cap an observation before re-feeding it (big API responses get re-sent every turn)."""
+    if len(text) <= cap:
+        return text
+    head = cap * 2 // 3
+    return text[:head] + f"\n…[{len(text) - cap} chars truncated]…\n" + text[-(cap - head):]
+
+
+def _build_head(instruction: str, supervisor: str, plan_text: str,
+                retrieved: str, api_sigs: list[str]) -> str:
     parts = [f"Supervisor: {supervisor}", f"Task: {instruction}"]
+    if api_sigs:
+        parts.append("\nAVAILABLE APIS (already looked up — use these; only call api_docs for "
+                     "something not listed):\n" + "\n".join(api_sigs))
     if plan_text:
         parts.append(f"\nPLAN:\n{plan_text}")
     if retrieved.strip():
@@ -100,10 +107,17 @@ def solve(world: AppWorld, memory) -> Outcome:
     supervisor = f"{getattr(sup, 'first_name', '')} {getattr(sup, 'last_name', '')} " \
                  f"<{getattr(sup, 'email', '')}>".strip()
 
+    # Offline API retrieval (no LLM tokens) — inject only the relevant signatures
+    # instead of letting the agent dump api_docs into context every task.
+    try:
+        api_sigs = apidocs.get_index(world.apis).retrieve(instruction, k=API_TOPK)
+    except Exception:
+        api_sigs = []
+
     retrieved_items = memory.retrieve(instruction, k=6)
-    retrieved = "\n".join(f"- {it.text}" for it in retrieved_items)[:2000]
-    plan_text = roles.plan(call_llm, instruction, supervisor, retrieved)
-    head = _build_head(instruction, supervisor, plan_text, retrieved)
+    retrieved = "\n".join(f"- {it.text}" for it in retrieved_items)[:1500]
+    plan_text = roles.plan(call_llm, instruction, supervisor, retrieved) if USE_PLAN else ""
+    head = _build_head(instruction, supervisor, plan_text, retrieved, api_sigs)
 
     turns: list[Turn] = []
     msg_turns: list[dict] = []
@@ -117,7 +131,10 @@ def solve(world: AppWorld, memory) -> Outcome:
 
         is_finish, ans = roles.parse_finish(reply)
         if is_finish:
-            verified, hint = roles.self_verify(call_llm, instruction, turns)
+            if USE_VERIFY:
+                verified, hint = roles.self_verify(call_llm, instruction, turns)
+            else:
+                verified, hint = True, ""
             if verified or verify_rejections >= MAX_VERIFY_REJECTIONS:
                 verified_ok = verified
                 answer = ans
@@ -138,8 +155,9 @@ def solve(world: AppWorld, memory) -> Outcome:
         out = world.execute(code)
         out_s = str(out)
         err = out_s if out_s.startswith("Execution failed. Traceback:") else None
-        turns.append(Turn(step, roles.guess_intent(reply), code, out_s, err))
-        msg_turns.append({"assistant": reply, "user": f"Execution output:\n{out_s}"})
+        obs = _truncate_obs(out_s)  # cap big API responses before re-feeding
+        turns.append(Turn(step, roles.guess_intent(reply), code, obs, err))
+        msg_turns.append({"assistant": reply, "user": f"Execution output:\n{obs}"})
         print(f"  step {step+1}: ran {len(code)} chars -> {out_s[:100]!r}")
 
         if err:  # error recovery (ARCH.md §5/§8)
