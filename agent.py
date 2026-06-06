@@ -36,10 +36,10 @@ from memory import build_memory, Turn, Outcome
 MODEL = os.environ.get("MODEL", "groq/llama-3.3-70b-versatile")
 DATASET = os.environ.get("APPWORLD_DATASET", "dev")
 EXPERIMENT = os.environ.get("APPWORLD_EXPERIMENT", "team_demo")
-MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "20"))
+MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "30"))
 MAX_TASKS = int(os.environ.get("MAX_TASKS", "0"))            # 0 = all tasks in split
 RESUME = os.environ.get("RESUME", "1") != "0"               # skip already-run tasks
-CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "2500"))
+CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "10000"))
 MAX_VERIFY_REJECTIONS = int(os.environ.get("MAX_VERIFY_REJECTIONS", "2"))
 # Token-saving knobs (see ARCH.md §6 / token budget):
 OBS_CAP = int(os.environ.get("OBS_CAP", "1200"))            # max chars per observation re-fed to model
@@ -56,8 +56,15 @@ writing Python that calls the apps via the preloaded `apis` object.
 becomes the next observation.
 - Relevant API signatures are provided below — prefer them. Only if you need an API not listed, call \
 apis.api_docs.show_api_descriptions(app_name=...) or show_api_doc(app_name=..., api_name=...).
-- Log in when needed: apis.supervisor.show_account_passwords(), then the app's login API to get an \
-access_token; pass it to later calls.
+- CRITICAL: every apis.* method takes KEYWORD arguments ONLY — e.g. \
+apis.spotify.login(username=..., password=...). Positional args raise a TypeError.
+- Logging in (most apps need it) — use EXACTLY this pattern (the username is the supervisor's EMAIL,
+  NOT the account_name):
+    email = apis.supervisor.show_profile()["email"]
+    creds = apis.supervisor.show_account_passwords()        # [{"account_name", "password"}]
+    pw = next(c["password"] for c in creds if c["account_name"] == "<app>")
+    token = apis.<app>.login(username=email, password=pw)["access_token"]
+  Then pass access_token=token to that app's other calls.
 - Work in small steps; inspect results before acting. Never invent API names/fields.
 - Grading is state-based: leave the databases in exactly the right state; avoid wrong or extra side \
 effects.
