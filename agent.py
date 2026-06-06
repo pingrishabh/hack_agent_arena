@@ -49,6 +49,10 @@ ACT_MAX_TOKENS = int(os.environ.get("ACT_MAX_TOKENS", "900"))
 USE_PLAN = os.environ.get("USE_PLAN", "1") != "0"
 USE_VERIFY = os.environ.get("USE_VERIFY", "1") != "0"
 API_RETRIEVAL = os.environ.get("API_RETRIEVAL", "hybrid")   # bm25 | hydra | hybrid
+# Cross-task recipe/episodic injection (memory.retrieve). Off by default: loose
+# retrieval can inject wrong-app recipes that mislead the model. HydraDB is still
+# used for API-doc retrieval and consolidation regardless.
+USE_MEMORY = os.environ.get("USE_MEMORY", "0") != "0"
 
 SYSTEM_PROMPT = """You are an autonomous coding agent in AppWorld. Solve the supervisor's task by \
 writing Python that calls the apps via the preloaded `apis` object.
@@ -86,6 +90,10 @@ apis.amazon.show_payment_cards() and address_id from apis.amazon.show_addresses(
 the task asks for, e.g. the home address). place_order orders everything currently in the cart. \
 Use a NON-EXPIRED payment card, and make sure each cart quantity does not exceed the product's \
 available inventory (place_order returns a 422 otherwise).
+- If the task is to BUY items that are on the user's WISH LIST, move each one with \
+apis.amazon.move_product_from_wish_list_to_cart(product_id=, access_token=) (this removes it from the \
+wish list AND adds it to the cart) rather than add_product_to_cart — "buy my wish list" should leave \
+those items removed from the wish list.
 - Don't assume an API doesn't exist — if unsure, list the app's APIs with \
 apis.api_docs.show_api_descriptions(app_name="<app>") before giving up.
 - Many list APIs are PAGINATED (page_index / page_limit). To count or aggregate ALL items, loop pages \
@@ -188,7 +196,7 @@ def solve(world: AppWorld, memory) -> Outcome:
     except Exception:
         api_sigs = []
 
-    retrieved_items = memory.retrieve(instruction, k=6)
+    retrieved_items = memory.retrieve(instruction, k=6) if USE_MEMORY else []
     retrieved = "\n".join(f"- {it.text}" for it in retrieved_items)[:1500]
     plan_text = roles.plan(call_llm, instruction, supervisor, retrieved) if USE_PLAN else ""
     head = _build_head(instruction, supervisor, plan_text, retrieved, api_sigs)
@@ -258,10 +266,11 @@ def solve(world: AppWorld, memory) -> Outcome:
                         f"Use one of these verbatim."})
                 except Exception:
                     pass
-            fix_items = memory.retrieve(err[:500], k=3)
-            if fix_items:
-                tip = "\n".join(f"- {it.text}" for it in fix_items)[:800]
-                msg_turns.append({"assistant": "", "user": f"Hint from past experience:\n{tip}"})
+            if USE_MEMORY:
+                fix_items = memory.retrieve(err[:500], k=3)
+                if fix_items:
+                    tip = "\n".join(f"- {it.text}" for it in fix_items)[:800]
+                    msg_turns.append({"assistant": "", "user": f"Hint from past experience:\n{tip}"})
 
         if world.task_completed():  # safety fallback (shouldn't trigger once patched)
             print("  ✓ task_completed (direct)")
