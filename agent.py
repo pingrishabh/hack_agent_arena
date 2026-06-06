@@ -66,6 +66,9 @@ apis.spotify.login(username=..., password=...). Positional args raise a TypeErro
     token = apis.<app>.login(username=email, password=pw)["access_token"]
   Then pass access_token=token to that app's other calls.
 - Work in small steps; inspect results before acting. Never invent API names/fields.
+- Many list APIs are PAGINATED (page_index / page_limit). To count or aggregate ALL items, loop pages \
+(increment page_index from 0) until a page returns empty — never assume one call returns everything. \
+A result of 0/empty usually means you only checked the first page or the wrong field.
 - Grading is state-based: leave the databases in exactly the right state; avoid wrong or extra side \
 effects.
 - When FULLY done, do NOT call complete_task yourself — reply a single line, no code:

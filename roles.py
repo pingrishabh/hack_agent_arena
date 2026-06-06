@@ -22,11 +22,12 @@ using the apps' APIs. Be concrete about which apps/APIs are likely needed and th
 operations (log in first, fetch data, then act, then verify). Do NOT write code. Output only
 the numbered plan."""
 
-VERIFY_SYSTEM = """You are a strict verifier for an autonomous AppWorld agent. The agent thinks it
-has finished. Your job: decide whether the task is TRULY and fully accomplished, with the correct
-side effects and no collateral damage. Grading is state-based, so being "almost right" fails.
-Reply with ONLY a JSON object: {"verified": true|false, "recheck": "<if false, what to re-read or
-fix before completing>"}."""
+VERIFY_SYSTEM = """You verify an AppWorld agent that believes it has finished. Be CONSERVATIVE:
+APPROVE unless you can point to a SPECIFIC, concrete problem — a required side effect clearly not
+done, an answer in the wrong format/type, or an obvious miscount/omission you can name. Vague doubt
+or "maybe double-check" is NOT grounds to reject; if the work looks plausibly complete and correct,
+approve it (a wrong rejection can push a correct answer to a wrong one). Reply with ONLY a JSON
+object: {"verified": true|false, "issue": "<the specific concrete problem if false, else empty>"}."""
 
 
 def plan(complete, instruction: str, supervisor: str, retrieved: str) -> str:
@@ -60,7 +61,8 @@ def self_verify(complete, instruction: str, turns: list) -> tuple[bool, str]:
         if obj is None:
             return True, ""
         verified = bool(obj.get("verified", True))
-        return verified, str(obj.get("recheck", "") or "")
+        issue = obj.get("issue", obj.get("recheck", "")) or ""
+        return verified, str(issue)
     except Exception:
         return True, ""
 
