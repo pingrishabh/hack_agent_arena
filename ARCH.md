@@ -119,6 +119,10 @@ All roles go through the one `call_llm`. Each returns a parsed result; parsing i
 - `self_verify(task, world) -> Verdict{ok: bool, reason: str, fix_hint: str}` — before
   `complete_task`: re-read state via read-only APIs and confirm the intended side effects landed
   (directly attacks `task_completed() ≠ correct`). If `not ok`, loop back into ACT.
+  **Completion interception:** the model often calls `complete_task` directly instead of using the
+  FINISH signal, bypassing verification. We patch `complete_task` inside the persisted sandbox so the
+  call is *captured* (side effects still run, completion held); we then self-verify and only restore +
+  complete for real if it passes. This makes the verify gate unbypassable.
 - `reflect(trajectory, outcome) -> Lessons` — once/task; summarize what worked/failed → feeds
   `consolidate` into procedural recipes + entity/semantic updates.
 

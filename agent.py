@@ -36,10 +36,10 @@ from memory import build_memory, Turn, Outcome
 MODEL = os.environ.get("MODEL", "groq/llama-3.3-70b-versatile")
 DATASET = os.environ.get("APPWORLD_DATASET", "dev")
 EXPERIMENT = os.environ.get("APPWORLD_EXPERIMENT", "team_demo")
-MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "30"))
+MAX_INTERACTIONS = int(os.environ.get("MAX_INTERACTIONS", "20"))
 MAX_TASKS = int(os.environ.get("MAX_TASKS", "0"))            # 0 = all tasks in split
 RESUME = os.environ.get("RESUME", "1") != "0"               # skip already-run tasks
-CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "4500"))
+CONTEXT_BUDGET = int(os.environ.get("CONTEXT_BUDGET", "2500"))
 MAX_VERIFY_REJECTIONS = int(os.environ.get("MAX_VERIFY_REJECTIONS", "2"))
 # Token-saving knobs (see ARCH.md §6 / token budget):
 OBS_CAP = int(os.environ.get("OBS_CAP", "1200"))            # max chars per observation re-fed to model
@@ -64,6 +64,28 @@ effects.
 - When FULLY done, do NOT call complete_task yourself — reply a single line, no code:
   FINISH: <answer or NONE>   (answer only for question tasks). A verifier checks your work.
 """
+
+
+# Completion interception (ARCH.md §5): the model often calls complete_task
+# directly, bypassing self-verify. We patch complete_task inside the persisted
+# sandbox so its call is CAPTURED (side effects still run, completion held), we
+# verify, then complete for real. AppWorld's IPython namespace persists across
+# execute() calls, so __ORIG_COMPLETE__/__CAPTURED_ANSWER__ survive between turns.
+_CAPTURE_PRELUDE = '''
+try:
+    __ORIG_COMPLETE__
+except NameError:
+    __ORIG_COMPLETE__ = apis.supervisor.complete_task
+def __capture_complete__(answer=None, status="success"):
+    globals()["__CAPTURED_ANSWER__"] = answer
+    print("[completion captured — held for verification]")
+    return {"message": "completion captured, pending verification"}
+apis.supervisor.complete_task = __capture_complete__
+'''
+_DO_COMPLETE = '''
+apis.supervisor.complete_task = __ORIG_COMPLETE__
+apis.supervisor.complete_task(answer=globals().get("__CAPTURED_ANSWER__", None))
+'''
 
 
 def call_llm(messages: list[dict], system: str = SYSTEM_PROMPT, max_tokens: int = 900) -> str:
@@ -150,30 +172,40 @@ def solve(world: AppWorld, memory) -> Outcome:
         reply = call_llm(messages)
 
         is_finish, ans = roles.parse_finish(reply)
-        if is_finish:
+        code = roles.extract_code(reply)
+        completing = is_finish or ("complete_task" in code)
+
+        if completing:
+            # Run the turn but CAPTURE the completion (side effects still run, the
+            # actual complete_task is held) so self-verify can gate it.
+            comp_code = f"apis.supervisor.complete_task(answer={ans!r})" if is_finish else code
+            cap = str(world.execute(_CAPTURE_PRELUDE + "\n" + comp_code))
+            cap_err = cap if cap.startswith("Execution failed. Traceback:") else None
+            obs = _truncate_obs(cap)
+            turns.append(Turn(step, "completion-attempt", comp_code, obs, cap_err))
+
             if USE_VERIFY:
                 verified, hint = roles.self_verify(call_llm, instruction, turns)
             else:
                 verified, hint = True, ""
+
             if verified or verify_rejections >= MAX_VERIFY_REJECTIONS:
                 verified_ok = verified
                 answer = ans
-                out = world.execute(f"apis.supervisor.complete_task(answer={ans!r})")
-                print(f"  step {step+1}: FINISH (verified={verified}) -> {str(out)[:80]!r}")
-                msg_turns.append({"assistant": reply, "user": f"Execution output:\n{out}"})
+                done = str(world.execute(_DO_COMPLETE))  # restore + complete for real
+                print(f"  step {step+1}: completed (verified={verified}) -> {done[:60]!r}")
+                msg_turns.append({"assistant": reply, "user": f"Execution output:\n{obs}"})
                 break
+
             verify_rejections += 1
-            note = (f"NOT VERIFIED. Before finishing, re-read the relevant state with read-only "
-                    f"API calls and confirm: {hint or 'that every required side effect landed.'} "
-                    f"Then continue.")
-            print(f"  step {step+1}: verify rejected ({verify_rejections})")
-            msg_turns.append({"assistant": reply, "user": note})
-            turns.append(Turn(step, "verify-rejected", "", note, None))
+            note = (f"VERIFICATION FAILED — your completion was held back, NOT submitted. Re-read the "
+                    f"relevant state with read-only API calls and confirm/fix: "
+                    f"{hint or 'every required side effect AND the exact answer format.'} Then finish again.")
+            print(f"  step {step+1}: completion rejected ({verify_rejections})")
+            msg_turns.append({"assistant": reply, "user": f"Execution output:\n{obs}\n\n{note}"})
             continue
 
-        code = roles.extract_code(reply)
-        out = world.execute(code)
-        out_s = str(out)
+        out_s = str(world.execute(code))
         err = out_s if out_s.startswith("Execution failed. Traceback:") else None
         obs = _truncate_obs(out_s)  # cap big API responses before re-feeding
         turns.append(Turn(step, roles.guess_intent(reply), code, obs, err))
@@ -186,7 +218,7 @@ def solve(world: AppWorld, memory) -> Outcome:
                 tip = "\n".join(f"- {it.text}" for it in fix_items)[:800]
                 msg_turns.append({"assistant": "", "user": f"Hint from past experience:\n{tip}"})
 
-        if world.task_completed():  # model completed directly (fallback path)
+        if world.task_completed():  # safety fallback (shouldn't trigger once patched)
             print("  ✓ task_completed (direct)")
             break
 
